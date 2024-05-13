@@ -1,0 +1,46 @@
+public class
+        ReajusteSalario {
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            float s, s1, s2, s3, s4, st1, st2, st3, st4;
+            System.out.print("Informe o seu salário: ");
+            s = scanner.nextFloat();
+            System.out.printf("\nSeu salário antes do reajuste é de: %.2f", s);
+            if (s <= 280) {
+                System.out.println("\nO percentual do seu aumento é de 20%");
+            } else if (s <= 700 && s > 280) {
+                System.out.println("\nO percentual do seu aumento é de 15%");
+            } else if (s > 700 && s <= 1500) {
+                System.out.println("\nO percentual do seu aumento é de 10%");
+            } else if (s > 1500) {
+                System.out.println("\nO percentual do seu aumento é de 5%");
+            } else {
+                System.out.println("\nSalário incorreto");
+            }   s1 = s * 0.20f;
+            s2 = s * 0.15f;
+            s3 = s * 0.10f;
+            s4 = s * 0.05f;
+            if (s <= 280) {
+                System.out.printf("\nO aumento no seu salário foi de: %.2f", s1);
+            } else if (s <= 700 && s > 280) {
+                System.out.printf("\nO aumento no seu salário foi de: %.2f", s2);
+            } else if (s > 700 && s <= 1500) {
+                System.out.printf("\nO aumento no seu salário foi de: %.2f", s3);
+            } else if (s > 1500) {
+                System.out.printf("\nO aumento no seu salário foi de: %.2f", s4);
+            } else {
+                System.out.println("\nSalário incorreto");
+            }   st1 = s + s1;
+            st2 = s + s2;
+             st3 = s + s3;
+            st4 = s + s4;
+            if (s <= 280) {
+                System.out.printf("\nSeu salário final é de: %.2f", st1);
+            } else if (s <= 700 && s > 280) {
+                System.out.printf("\nSeu salário final é de: %.2f", st2);
+            } else if (s > 700 && s <= 1500) {
+                System.out.printf("\nSeu salário final é de: %.2f", st3);
+            } else if (s > 1500) {
+                System.out.printf("\nSeu salário final é de: %.2f", st4);
+            } else {
+                System.out.println("\nSalário incorreto");
